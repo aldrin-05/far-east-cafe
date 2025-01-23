@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* General Reset */
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Body */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #1e1e1e;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    position: sticky;
+    z-index: 10;
+}
+
+.logo img {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dropdown styles */
+nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #1e1e1e;
+    top: 100%;
+    left: 0;
+    width: max-content;
+    z-index: 1000;
+    border-radius: 8px;
+}
+
+nav ul li .dropdown li {
+    display: block;
+    background-color: #1e1e1e;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+nav ul li .dropdown li a {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li .dropdown li a:hover {
+    background-color: #ff5722;
+}
+
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #ff5722;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+#loyalty-program {
+    background-color: #121212;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#loyalty-program .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+#loyalty-program h2 {
+    font-size: 2.5rem;
+    color: #ff5722;
+    margin-bottom: 20px;
+}
+
+#loyalty-program p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.rewards-info h3 {
+    font-size: 2.5rem;
+    color: #ff5722;
+    margin-bottom: 15px;
+}
+
+.rewards-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.rewards-info li {
+    font-size: 1.1rem;
+    color: #ffff;
+    margin: 10px 0;
+}
+
+.rewards-cta {
+    margin-top: 30px;
+}
+
+.join-button {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.rewards-cta p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.rewards-cta a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.rewards-cta a:hover {
+    text-decoration: none;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+footer a {
+    color: #ff5722;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .values-list {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Cart Icon Styles */
+.icon-cart {
+    position: relative;
+    cursor: pointer;
+}
+
+.icon-cart span {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #e64a19;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 30%;
+}
+
+/* Cart Dropdown Styles */
+.cart-dropdown {
+    position: absolute;
+    top: 170px;
+    right: 0;
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+
+}
+
+.cart-dropdown.show {
+    display: block;
+}
+
+.cart-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+  
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-details p {
+    margin: 5px 0;
+}
+
+.cart-item button {
+    background-color: #e64a19;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.cart-item button:hover {
+    background-color: #ff5722;
+}
+
+#checkout-btn {
+    position: relative;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#checkout-btn.loading {
+    pointer-events: none;
+    background-color: #1e1e1e;
+}
+
+#checkout-btn .spinner {
+    border: 3px solid transparent;
+    border-top: 3px solid white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+#checkout-btn.loading .spinner {
+    display: block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#checkout-btn.success {
+    background-color: #ff5722;
+}
+
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* General Reset */
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Body */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+
+/* Header */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #1e1e1e;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    position: sticky;
+    z-index: 10;
+}
+
+/* Logo adjustments */
+.logo img {
+    height: 60px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dropdown styles */
+nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #1e1e1e;
+    top: 100%;
+    left: 0;
+    width: max-content;
+    z-index: 1000;
+    border-radius: 8px;
+}
+
+nav ul li .dropdown li {
+    display: block;
+    background-color: #1e1e1e;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+nav ul li .dropdown li a {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li .dropdown li a:hover {
+    background-color: #ff5722;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #ff5722;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+/* Shared Styles for About Us, Our Story, and Mission */
+#about-us, #our-story, #mission {
+    text-align: center;
+    position: relative;
+    padding: 100px 20px;
+    margin: 0;
+    background-color: #121212;  /* Dark background color */
+    color: #fff;  /* White text color */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#about-us:hover, #our-story:hover, #mission:hover {
+    background-color: #242424
+    
+}
+
+#about-us h2, #our-story h2, #mission h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ff5722;  /* Accent color */
+}
+
+#about-us p, #our-story p, #mission p {
+    font-size: 28px;
+    margin-bottom: 15px;
+    line-height: 1.8; /* Improved line height for readability */
+}
+
+/* Values Section */
+#our-values {
+    background-color: #1e1e1e;
+    padding: 50px 20px;
+    text-align: center;
+   
+}
+
+#our-values h2{
+    color: #ff5722;
+    font-size: 48px;
+}
+
+.values-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.value-item {
+    background-color: #242424;
+    border-radius: 10px;
+    padding: 60px;
+    text-align: center;
+    flex: 1 1 300px;
+    max-width: 400px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    background-color: #ff5722;
+}
+
+.value-item img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.value-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.value-item p {
+    font-size: 1.6rem;
+}
+
+/* Call-to-Action */
+#call-to-action {
+    text-align: center;
+    padding: 50px 20px;
+    justify-items: center;
+}
+
+#call-to-action .cta-button {
+    padding: 15px 30px;
+    background-color: #ff5722;
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#call-to-action .cta-button:hover {
+    background-color: #e64a19;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+footer a {
+    color: #ff5722;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .values-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+        background-size: cover;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+
+.footer img{
+    max-width: 30px;
+    height: 40px;
+
+}
+
+.hero h1{
+    font-size: 68px;
+    color: #ff5722;
+}
+
+
+
+/* Cart Icon Styles */
+.icon-cart {
+    position: relative;
+    cursor: pointer;
+}
+
+.icon-cart span {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #e64a19;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 30%;
+}
+
+/* Cart Dropdown Styles */
+.cart-dropdown {
+    position: absolute;
+    top: 170px;
+    right: 0;
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+
+}
+
+.cart-dropdown.show {
+    display: block;
+}
+
+.cart-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+  
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-details p {
+    margin: 5px 0;
+}
+
+.cart-item button {
+    background-color: #e64a19;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.cart-item button:hover {
+    background-color: #ff5722;
+}
+
+#checkout-btn {
+    position: relative;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}

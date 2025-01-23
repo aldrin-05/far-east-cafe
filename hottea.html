@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Far East Cafe, your favorite place for coffee and relaxation. Explore our menu of hot coffee, cold brews, and specialty drinks!">
+    <meta name="keywords" content="coffee, cafe, espresso, latte, cappuccino, cold brew, Far East Cafe">
+    <meta property="og:title" content="Far East Cafe - Coffee and Relaxation">
+    <meta property="og:description" content="Your favorite place for coffee and relaxation. Start your day with coffee!">
+    <meta property="og:image" content="path/to/hero-image.jpg">
+    <title>Far East Cafe</title>
+    <link rel="stylesheet" href="hotcoffee.css">
+    <link rel="icon" href="https://i.postimg.cc/QtZhb4kc/DALL-E-2025-01-10-09-21-20-A-refined-logo-design-for-a-coffee-shop-website-named-Far-East-Cafe.webp" alt="Far East Cafe">
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="">
+     <div class="container">
+    <header>
+        <div class="logo">
+            <img src="https://i.postimg.cc/QtZhb4kc/DALL-E-2025-01-10-09-21-20-A-refined-logo-design-for-a-coffee-shop-website-named-Far-East-Cafe.webp" alt="Far East Cafe Logo">
+        </div>
+        <button class="nav-toggle">&#9776;</button>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a>
+                    <ul class="dropdown">
+                        <li><a href="hotcoffee.html">Hot Coffee</a></li>
+                        <li><a href="icedcoffee.html">Iced Coffee</a></li>
+                        <li><a href="frappedcoffee.html">Coffee Frappuccino</a></li>
+                        <li><a href="hottea.html">Hot Tea</a></li>
+                        <li><a href="icedtea.html">Iced Tea</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="rewards.html">Rewards</a></li>
+                 <!-- Cart Icon with Item Count -->
+<div class="icon-cart">
+    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+    </svg>
+    <span id="cart-count">0</span>
+</div>
+            </ul>
+           
+        </nav>
+    </header>
+ 
+
+    <main>
+        
+<section id="bestseller">
+    <h1 id="menuOur">HOT TEA:</h1>
+</section>
+        <div id="menu">
+            <div class="listProduct">
+                <div class="menu-item">
+                    <h3>Chai Latte</h3>
+                    <img src="C:\HTML FILES\hot tea chai tea.jpg" alt="Chai Latte" loading="lazy" />
+                    <p>rich and bold cortado coffee</p>
+                    <div class="price">P100</div>
+            <button class="addCart">Add To Cart</button>
+                </div>
+                <div class="menu-item">
+                    <h3>Ginger Bread Oatmilk</h3>
+                    <img src="C:\HTML FILES\hot tea ginger bread oatmilk.jpg" alt="Ginger Bread Oatmilk" loading="lazy" />
+                    <p>Smooth and creamy latte with steamed milk.</p>
+                    <div class="price">P100</div>
+            <button class="addCart">Add To Cart</button>
+                </div>
+                <div class="menu-item">
+                    <h3>Chai Tea</h3>
+                    <img src="C:\HTML FILES\hot tea chai tea.jpg" alt="Chai Tea" />
+                    <p>Classic cappuccino with a frothy top.</p>
+                    <div class="price">P100</div>
+            <button class="addCart">Add To Cart</button>
+                </div>
+                <div class="menu-item">
+                    <h3>Vanilla Chai Latte</h3>
+                    <img src="C:\HTML FILES\hot tea vanilla chai latte.jpg" alt="Vanila Chai Latte" />
+                    <p>americano Perfect blend of strength and simplicity.</p>
+                    <div class="price">P100</div>
+            <button class="addCart">Add To Cart</button>
+                </div>
+                
+            </div>
+           
+     </div>
+            
+
+   <!-- Cart Dropdown -->
+<div id="cart-dropdown" class="cart-dropdown">
+    <h3>Cart Items</h3>
+    <div id="cart-items">
+        <!-- Dynamically added cart items will appear here -->
+    </div>
+    <p>Total: <span id="total-price">0</span> PHP</p>
+    <button id="checkout-btn">Checkout</button>
+</div>
+        
+    
+
+    <footer>
+        <p>&copy; 2023 Far East Cafe. All rights reserved.</p>
+       
+    </footer>
+
+    <script src="script.js"></script>
+
+
+</html>
+
+
+
+
+
